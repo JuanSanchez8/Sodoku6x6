@@ -1,0 +1,33 @@
+.root { -fx-font-family: "Segoe UI", "Inter", "System"; }
+.title { -fx-font-size: 22px; -fx-font-weight: 700; }
+.subtitle { -fx-opacity: 0.8; }
+.app-bar { -fx-background-color: linear-gradient(to bottom, #1f2937, #111827); -fx-text-fill: white; }
+.app-bar .label { -fx-text-fill: white; }
+.status-bar { -fx-background-color: #F3F4F6; }
+.side-panel { -fx-background-color: #F9FAFB; -fx-padding: 12; -fx-background-radius: 10; }
+.section-title { -fx-font-weight: 700; -fx-opacity: 0.9; }
+
+
+/* Tablero */
+.board { -fx-background-color: #E5E7EB; -fx-padding: 12; -fx-background-radius: 12; }
+.cell {
+    -fx-pref-width: 80px;
+    -fx-pref-height: 80px;
+    -fx-font-size: 28px;
+    -fx-background-radius: 8;
+    -fx-alignment: center;
+    -fx-background-color: white;
+    -fx-border-color: #D1D5DB;
+    -fx-border-width: 1;
+}
+/* Bordes gruesos para delimitar bloques 2×3 */
+.block-top { -fx-border-top-width: 3; }
+.block-bottom { -fx-border-bottom-width: 3; }
+.block-left { -fx-border-left-width: 3; }
+.block-right { -fx-border-right-width: 3; }
+
+
+/* Estados sugeridos (útiles más adelante) */
+.cell-error { -fx-background-color: #FEE2E2; -fx-border-color: #EF4444; }
+.cell-fixed { -fx-background-color: #F3F4F6; -fx-opacity: 0.9; }
+.cell-focus { -fx-border-color: #3B82F6; -fx-border-width: 2; }
