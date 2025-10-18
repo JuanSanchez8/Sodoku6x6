@@ -12,13 +12,17 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 
-<BorderPane prefHeight="680.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sodoku6x6.controller.GameController">
+<BorderPane prefHeight="680.0" prefWidth="900.0"
+            xmlns="http://javafx.com/javafx/25" xmlns:fx="http://javafx.com/fxml/1"
+            fx:controller="org.example.sodoku6x6.controller.GameController"
+            stylesheets="@styles.css">
 
     <top>
-        <HBox alignment="CENTER_LEFT" spacing="12" BorderPane.alignment="CENTER">
+        <HBox alignment="CENTER_LEFT" spacing="12" styleClass="app-bar" BorderPane.alignment="CENTER">
             <children>
-                <Label text="SUDOKU 6×6" />
+                <Label styleClass="title" text="SUDOKU 6×6" />
                 <Pane HBox.hgrow="ALWAYS" />
+                <Label styleClass="subtitle" text="Fundamentos de Programación Orientada a Eventos" />
             </children>
             <padding><Insets bottom="12" left="16" right="16" top="12" /></padding>
         </HBox>
@@ -110,7 +114,7 @@
                 <Label text="MiniProyecto #2" />
                 <Pane HBox.hgrow="ALWAYS">
                <children>
-                  <Button fx:id="buttonHelp" layoutX="78.0" layoutY="2.0" mnemonicParsing="false" onAction="#onActionAyuda" prefHeight="25.0" prefWidth="132.0" text="Ayuda" />
+                  <Button fx:id="buttonHelp" layoutX="78.0" layoutY="2.0" mnemonicParsing="false" onAction="#onActionAyuda" prefHeight="25.0" prefWidth="132.0"  text="Ayuda" />
                   <Button fx:id="buttonCheck" layoutX="386.0" layoutY="2.0" mnemonicParsing="false" onMouseClicked="#onMouseCheck" prefHeight="25.0" prefWidth="133.0" text="Listo" />
                </children></Pane>
                 <Label />

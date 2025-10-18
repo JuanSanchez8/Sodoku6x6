@@ -31,3 +31,4 @@
 .cell-error { -fx-background-color: #FEE2E2; -fx-border-color: #EF4444; }
 .cell-fixed { -fx-background-color: #F3F4F6; -fx-opacity: 0.9; }
 .cell-focus { -fx-border-color: #3B82F6; -fx-border-width: 2; }
+

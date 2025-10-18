@@ -33,9 +33,9 @@
                         <!-- Botones -->
                         <HBox alignment="CENTER" spacing="10">
                             <children>
-                                <Button fx:id="buttonAgain" defaultButton="true" style="-fx-background-color:#2563EB; -fx-text-fill:white; -fx-font-weight:bold; -fx-background-radius:10; -fx-padding:8 14;" text="Jugar de nuevo" />
-                                <Button fx:id="buttonHome" style="-fx-background-color:#F3F4F6; -fx-text-fill:#111827; -fx-font-weight:600; -fx-background-radius:10; -fx-padding:8 14;" text="Inicio" />
-                                <Button fx:id="buttonExit" cancelButton="true" style="-fx-background-color:#EF4444; -fx-text-fill:white; -fx-font-weight:bold; -fx-background-radius:10; -fx-padding:8 14;" text="Salir" />
+                                <Button fx:id="buttonAgain" defaultButton="true" text="Jugar de nuevo" />
+                                <Button fx:id="buttonHome" text="Inicio" />
+                                <Button fx:id="buttonExit" cancelButton="true"  text="Salir" />
                             </children>
                         </HBox>
                     </children>
