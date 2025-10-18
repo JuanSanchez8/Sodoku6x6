@@ -13,7 +13,7 @@ public class Launcher extends Application {
 
     @Override
     public void start(Stage stage) throws Exception {
-        FXMLLoader fxml = new FXMLLoader(Launcher.class.getResource("game.fxml"));
+        FXMLLoader fxml = new FXMLLoader(Launcher.class.getResource("start.fxml"));
         Scene scene = new Scene(fxml.load());
         stage.setTitle("Sudoku 6x6");
         stage.setScene(scene);

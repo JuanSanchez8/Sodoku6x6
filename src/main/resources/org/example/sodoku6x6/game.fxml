@@ -12,7 +12,7 @@
 <?import javafx.scene.layout.RowConstraints?>
 <?import javafx.scene.layout.StackPane?>
 
-<BorderPane prefHeight="680.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sodoku6x6.StartController">
+<BorderPane prefHeight="680.0" prefWidth="900.0" xmlns="http://javafx.com/javafx/21" xmlns:fx="http://javafx.com/fxml/1" fx:controller="org.example.sodoku6x6.controller.GameController">
 
     <top>
         <HBox alignment="CENTER_LEFT" spacing="12" BorderPane.alignment="CENTER">
@@ -38,6 +38,7 @@
                         <ColumnConstraints percentWidth="16.6667" />
                         <ColumnConstraints percentWidth="16.6667" />
                     </columnConstraints>
+
                     <!-- 6 filas -->
                     <rowConstraints>
                         <RowConstraints percentHeight="16.6667" />
@@ -48,54 +49,56 @@
                         <RowConstraints percentHeight="16.6667" />
                     </rowConstraints>
 
-                    <!-- Fila 0 -->
-                    <TextField fx:id="cell00" alignment="CENTER" style="-fx-font-size: 28px;" />
-                    <TextField fx:id="cell01" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" />
-                    <TextField fx:id="cell02" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" />
-                    <TextField fx:id="cell03" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" />
-                    <TextField fx:id="cell04" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" />
-                    <TextField fx:id="cell05" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" />
+                    <!-- Fila 0 -> (1) -->
+                    <TextField fx:id="a1" alignment="CENTER" style="-fx-font-size: 28px;" />
+                    <TextField fx:id="b1" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" />
+                    <TextField fx:id="c1" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" />
+                    <TextField fx:id="d1" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" />
+                    <TextField fx:id="e1" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" />
+                    <TextField fx:id="f1" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" />
 
-                    <!-- Fila 1 -->
-                    <TextField fx:id="cell10" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="1" />
-                    <TextField fx:id="cell11" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
-                    <TextField fx:id="cell12" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
-                    <TextField fx:id="cell13" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
-                    <TextField fx:id="cell14" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
-                    <TextField fx:id="cell15" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
+                    <!-- Fila 1 -> (2) -->
+                    <TextField fx:id="a2" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="1" />
+                    <TextField fx:id="b2" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="1" />
+                    <TextField fx:id="c2" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="1" />
+                    <TextField fx:id="d2" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="1" />
+                    <TextField fx:id="e2" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="1" />
+                    <TextField fx:id="f2" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="1" />
 
-                    <!-- Fila 2 -->
-                    <TextField fx:id="cell20" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="2" />
-                    <TextField fx:id="cell21" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
-                    <TextField fx:id="cell22" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
-                    <TextField fx:id="cell23" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
-                    <TextField fx:id="cell24" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
-                    <TextField fx:id="cell25" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
+                    <!-- Fila 2 -> (3) -->
+                    <TextField fx:id="a3" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="2" />
+                    <TextField fx:id="b3" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="2" />
+                    <TextField fx:id="c3" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="2" />
+                    <TextField fx:id="d3" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="2" />
+                    <TextField fx:id="e3" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="2" />
+                    <TextField fx:id="f3" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="2" />
 
-                    <!-- Fila 3 -->
-                    <TextField fx:id="cell30" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="3" />
-                    <TextField fx:id="cell31" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
-                    <TextField fx:id="cell32" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
-                    <TextField fx:id="cell33" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
-                    <TextField fx:id="cell34" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
-                    <TextField fx:id="cell35" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
+                    <!-- Fila 3 -> (4) -->
+                    <TextField fx:id="a4" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="3" />
+                    <TextField fx:id="b4" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="3" />
+                    <TextField fx:id="c4" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="3" />
+                    <TextField fx:id="d4" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="3" />
+                    <TextField fx:id="e4" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="3" />
+                    <TextField fx:id="f4" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="3" />
 
-                    <!-- Fila 4 -->
-                    <TextField fx:id="cell40" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="4" />
-                    <TextField fx:id="cell41" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
-                    <TextField fx:id="cell42" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
-                    <TextField fx:id="cell43" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
-                    <TextField fx:id="cell44" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
-                    <TextField fx:id="cell45" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
+                    <!-- Fila 4 -> (5) -->
+                    <TextField fx:id="a5" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="4" />
+                    <TextField fx:id="b5" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="4" />
+                    <TextField fx:id="c5" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="4" />
+                    <TextField fx:id="d5" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="4" />
+                    <TextField fx:id="e5" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="4" />
+                    <TextField fx:id="f5" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="4" />
 
-                    <!-- Fila 5 -->
-                    <TextField fx:id="cell50" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="5" />
-                    <TextField fx:id="cell51" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
-                    <TextField fx:id="cell52" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
-                    <TextField fx:id="cell53" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
-                    <TextField fx:id="cell54" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
-                    <TextField fx:id="cell55" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+                    <!-- Fila 5 -> (6) -->
+                    <TextField fx:id="a6" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.rowIndex="5" />
+                    <TextField fx:id="b6" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="1" GridPane.rowIndex="5" />
+                    <TextField fx:id="c6" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="2" GridPane.rowIndex="5" />
+                    <TextField fx:id="d6" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="3" GridPane.rowIndex="5" />
+                    <TextField fx:id="e6" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="4" GridPane.rowIndex="5" />
+                    <TextField fx:id="f6" alignment="CENTER" style="-fx-font-size: 28px;" GridPane.columnIndex="5" GridPane.rowIndex="5" />
+
                 </GridPane>
+
             </children>
             <padding><Insets bottom="16" left="16" right="16" top="16" /></padding>
         </StackPane>
